@@ -1,7 +1,7 @@
 const chai = require("chai");
 const expect = chai.expect;
-const clientFactory = require("../clientFactory");
-const serverFactory = require("../serverFactory");
+const clientFactory = require("../client-factory");
+const serverFactory = require("../server-factory");
 
 var client;
 var server;

@@ -1,7 +1,7 @@
 const restify = require("restify");
 const restifyLogger = require("restify-logger");
 const winston = require("winston");
-const valuesController = require("./controllers/valuesController");
+const valuesController = require("./controllers/values-controller");
 
 exports.initServer = function(restify, serverSettings) {
     if(!restify) {
