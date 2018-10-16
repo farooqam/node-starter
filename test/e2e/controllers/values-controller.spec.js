@@ -1,5 +1,6 @@
 const chai = require("chai");
 const expect = chai.expect;
+const httpStatus = require("http-status");
 const clientFactory = require("../client-factory");
 const serverFactory = require("../server-factory");
 
@@ -26,7 +27,7 @@ describe("Values Controller E2E Tests", () => {
                 "/api/values",
                 (err, _, res, actualValues) => {
                     expect(err).to.be.null;
-                    expect(res.statusCode).to.equal(200);
+                    expect(res.statusCode).to.equal(httpStatus.OK);
                     expect(actualValues).to.have.all.members(expectedValues);
                 });
 
@@ -44,7 +45,7 @@ describe("Values Controller E2E Tests", () => {
                 expectedValues,
                 (err, _, res, actualValues) => {
                     expect(err).to.be.null;
-                    expect(res.statusCode).to.equal(201);
+                    expect(res.statusCode).to.equal(httpStatus.CREATED);
                     expect(actualValues).to.have.all.members(expectedValues);
                     done();
                 });
@@ -60,7 +61,7 @@ describe("Values Controller E2E Tests", () => {
                 (err, _, res, resBody) => {
                     expect(err).to.be.null;
                     expect(resBody).to.be.empty;
-                    expect(res.statusCode).to.equal(204);
+                    expect(res.statusCode).to.equal(httpStatus.NO_CONTENT);
                     done();
                 });
         });
@@ -74,7 +75,7 @@ describe("Values Controller E2E Tests", () => {
                 (err, _, res, resBody) => {
                     expect(err).to.be.null;
                     expect(resBody).to.be.empty;
-                    expect(res.statusCode).to.equal(204);
+                    expect(res.statusCode).to.equal(httpStatus.NO_CONTENT);
                     done();
                 });
         });
