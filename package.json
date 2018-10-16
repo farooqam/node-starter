@@ -1,0 +1,38 @@
+{
+  "name": "node-restify-starter-app",
+  "version": "1.0.0",
+  "description": "A starter API written using nodejs and restify.",
+  "main": "src/server.js",
+  "scripts": {
+    "lint": "eslint .",
+    "start": "node src/server.js",
+    "test": "npm install && npm run lint && mocha test/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/farooqam/restify-starter.git"
+  },
+  "author": "Farooq Mahmud",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/farooqam/restify-starter/issues"
+  },
+  "homepage": "https://github.com/farooqam/restify-starter#readme",
+  "dependencies": {
+    "http-status": "^1.2.0",
+    "restify": "^7.2.1",
+    "restify-errors": "^6.1.1",
+    "restify-logger": "^2.0.1",
+    "restify-router": "^0.5.0",
+    "winston": "^3.1.0"
+  },
+  "optionalDependencies": {
+    "dtrace-provider": "^0.8.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.6.1",
+    "mocha": "^5.2.0",
+    "restify-clients": "^2.6.2"
+  }
+}
